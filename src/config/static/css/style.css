@@ -6,3 +6,29 @@
     width: 600px;
     height: 400px;
   }
+
+  .navigation {
+    background-color: red;
+    border-radius: 10px;
+    margin: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+  }
+
+  .navigation a {
+    max-height: 43px;
+    padding: 1rem;
+    color: var(--blanco);
+    font-size: 2rem;
+    font-weight: 700;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .navi {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 57px;
+    align-items: center;
+  }
+
