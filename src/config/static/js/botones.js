@@ -6,7 +6,7 @@ function exportarAPDF() {
     var contenedor = document.createElement('div');
 
     // Clonar y agregar cada elemento al contenedor
-    elementos.forEach(function(elemento) {
+    elementos.forEach(function (elemento) {
         contenedor.appendChild(elemento.cloneNode(true));
     });
 
@@ -18,7 +18,7 @@ function exportarAPDF() {
 function aplicarNegrita() {
     var editor = document.getElementById('sourceTA');
     var seleccion = window.getSelection().toString();
-    
+
     // Verifica si hay texto seleccionado
     if (seleccion !== '') {
         var nuevoContenido = editor.innerHTML.replace(seleccion, `__${seleccion}__`);
@@ -33,7 +33,7 @@ function aplicarNegrita() {
 function aplicarCursiva() {
     var editor = document.getElementById('sourceTA');
     var seleccion = window.getSelection().toString();
-    
+
     // Verifica si hay texto seleccionado
     if (seleccion !== '') {
         var nuevoContenido = editor.innerHTML.replace(seleccion, `_${seleccion}_`);
@@ -47,7 +47,7 @@ function aplicarCursiva() {
 function aplicarEnlace() {
     var editor = document.getElementById('sourceTA');
     var seleccion = window.getSelection().toString();
-    
+
     // Verifica si hay texto seleccionado
     if (seleccion !== '') {
         var nuevoContenido = editor.innerHTML.replace(seleccion, `[${seleccion}](${seleccion})`);
@@ -58,24 +58,12 @@ function aplicarEnlace() {
     }
 }
 
-function aplicarEnlace() {
-    var editor = document.getElementById('sourceTA');
-    var seleccion = window.getSelection().toString();
-    
-    // Verifica si hay texto seleccionado
-    if (seleccion !== '') {
-        var nuevoContenido = editor.innerHTML.replace(seleccion, `[${seleccion}](${seleccion})`);
-        editor.innerHTML = nuevoContenido;
-    } else {
-        var nuevoContenido = editor.innerHTML.replace(seleccion, `[Link](type link)`);
-        editor.innerHTML = nuevoContenido;
-    }
-}
+
 
 function aplicarImg() {
     var editor = document.getElementById('sourceTA');
     var seleccion = window.getSelection().toString();
-    
+
     // Verifica si hay texto seleccionado
     if (seleccion !== '') {
         var nuevoContenido = editor.innerHTML.replace(seleccion, `![${seleccion}](${seleccion})`);
@@ -94,7 +82,7 @@ function aplicarListas() {
     if (seleccion !== '') {
         var nuevoContenido = editor.innerHTML.replace(seleccion, `>-${seleccion}`);
         editor.innerHTML = nuevoContenido;
-    } else if (seleccion !== '>-') {
+    } else if (seleccion !== '>-' + seleccion) {
         var contenidoActual = document.getElementById('sourceTA').innerHTML;
 
         // Agregar un encabezado con #
@@ -105,25 +93,32 @@ function aplicarListas() {
     }
 }
 
-function aplicarEncabezados() {
-    var seleccion = window.getSelection().toString();
-    // Obtener el contenido actual del div
-    var contenidoActual = document.getElementById('sourceTA').innerHTML;
-
-    // Agregar un encabezado con #
-    var nuevoContenido = editor.innerHTML.replace(seleccion, `#${seleccion}` + contenidoActual)
-    
-
-    // Actualizar el contenido del div
-    document.getElementById('sourceTA').innerHTML = nuevoContenido;
-}
 
 function showHeaderMenu() {
     var headerMenu = document.getElementById("headerMenu");
     headerMenu.style.display = "block";
-  }
+}
 
-  function hideHeaderMenu() {
+function hideHeaderMenu() {
     var headerMenu = document.getElementById("headerMenu");
     headerMenu.style.display = "none";
-  }
+}
+
+function addHeader(level) {
+    var editor = document.getElementById('sourceTA');
+    var headerText = "Encabezado " + level;
+
+    // Obtener la selección actual del editor
+    var selectedText = editor.value.substring(editor.selectionStart, editor.selectionEnd);
+
+    // Agregar el encabezado correspondiente a la selección
+    var newText = editor.value.substring(0, editor.selectionStart) +
+        "#".repeat(level) + selectedText +
+        editor.value.substring(editor.selectionEnd);
+
+    // Reemplazar el contenido del editor con el nuevo texto
+    editor.value = newText;
+
+    // Ocultar el menú desplegable
+    hideHeaderMenu();
+}
