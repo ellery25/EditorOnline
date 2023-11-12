@@ -43,5 +43,30 @@
     box-sizing: border-box;
     background-color: rgb(194, 194, 214);
     height: 100%;
+<<<<<<< HEAD
     
   }
+=======
+
+}
+
+
+.elemento {
+  width: 60%; /* Ajusta el ancho según tus necesidades */
+  height: 40%; /* Ajusta la altura según tus necesidades */
+  background-color: grey; /* Color de fondo gris */
+  border: 2px solid black; 
+  cursor: move;
+  
+}
+
+.elemento.select{
+  transform: scale(1.02) rotate(-0.2deg);
+  box-shadow: 0px 0px 20px rgba(149,153, 159, 0.16);
+
+}
+
+.elemento.blue-background-class{
+  border: 2px dotted;
+}
+>>>>>>> 308db2889dc34a55d9a11d3c8894903fc054cb47
