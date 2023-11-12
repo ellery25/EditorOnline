@@ -152,9 +152,31 @@
 </section>
 
 
+<section>
+  <div class="lista" id="lista">
+    <div class="elemento">
+      <p>Elemento 1</p>
+    </div>
+    <div class="elemento">
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+    </div>
+    <div class="elemento">
+      <p>elemento 2</p>
+    </div>
+    <div class="elemento">
+      <p>elemento 3</p>
+    </div>
+  </div>
+</section>
+
+
 <script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
 <script src="{{ url_for('static', filename='js/bundle.js') }}"></script>
 <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 <script src="{{ url_for('static', filename='js/botones.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script src="{{ url_for('static', filename='js/drag.js') }}"></script>
+
+
 
 {% endblock %}
