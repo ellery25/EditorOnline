@@ -415,20 +415,24 @@
               </div>
               <div class="modal-body">
                 <form>
-                  <div class="mb-3">
-                    <label for="recipient-name" class="col-form-label">Contenido Programatico:</label>
-                    <textarea class="form-control  program_contentTextArea" id="content-text"></textarea>
-                  </div>
-                  <div class="mb-3">
-                    <label for="message-text" class="col-form-label">Estrategias de enseñanza de Aprendizaje:</label>
-                    <textarea class="form-control strategyLearningTextArea" id="learning-text"></textarea>
-                  </div>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Contenido Programático:</label>
+                        <textarea class="form-control program_contentTextArea" id="content-text"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Estrategias de enseñanza de Aprendizaje:</label>
+                        <textarea class="form-control strategyLearningTextArea" id="learning-text"></textarea>
+                    </div>
+                
+                    <!-- Campo oculto para almacenar el ID del bloque que se está editando -->
+                    <input type="hidden" id="editBlockId" value="">
                 </form>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="createBlockBtn">Crear bloque</button>
-              </div>
+                
+                <!-- Botones del pie del modal -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="createBlockBtn">Crear bloque</button>
+                </div>
             </div>
           </div>
         </div>
