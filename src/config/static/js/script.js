@@ -30,7 +30,7 @@ function competencesRun() {
 
 function learningsRun() {
   var text = document.getElementById('learningsText').value,
-      target = document.getElementById('learnings_result'),
+      target = document.getElementById('learning_results'),
       converter = new showdown.Converter();
 
   // Convertir el texto de Markdown a HTML
@@ -58,9 +58,9 @@ function methodologyRun() {
   target.innerHTML = html;
 }
 
-function biblographyRun() {
+function bibliographyRun() {
   var text = document.getElementById('bibliographyText').value,
-      target = document.getElementById('biblography'),
+      target = document.getElementById('bibliography'),
       converter = new showdown.Converter();
 
   // Convertir el texto de Markdown a HTML
