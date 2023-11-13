@@ -313,14 +313,7 @@
       data-bs-parent="#accordionExample"
     >
       <div class="accordion-body">
-        <strong>This is the third item's accordion body.</strong> It is hidden
-        by default, until the collapse plugin adds the appropriate classes that
-        we use to style each element. These classes control the overall
-        appearance, as well as the showing and hiding via CSS transitions. You
-        can modify any of this with custom CSS or overriding our default
-        variables. It's also worth noting that just about any HTML can go within
-        the <code>.accordion-body</code>, though the transition does limit
-        overflow.
+        <textarea name="justificationArea" id="JustificationText" class="full-width-textarea" rows="15" cols="80" oninput="JustificationRun()"></textarea>
       </div>
     </div>
   </div>
@@ -343,14 +336,7 @@
       data-bs-parent="#accordionExample"
     >
       <div class="accordion-body">
-        <strong>This is the third item's accordion body.</strong> It is hidden
-        by default, until the collapse plugin adds the appropriate classes that
-        we use to style each element. These classes control the overall
-        appearance, as well as the showing and hiding via CSS transitions. You
-        can modify any of this with custom CSS or overriding our default
-        variables. It's also worth noting that just about any HTML can go within
-        the <code>.accordion-body</code>, though the transition does limit
-        overflow.
+        <textarea name="competencesArea" id="competencesText" class="full-width-textarea" rows="15" cols="80" oninput="competencesRun()"></textarea>
       </div>
     </div>
   </div>
@@ -373,15 +359,7 @@
       data-bs-parent="#accordionExample"
     >
       <div class="accordion-body">
-        <strong>This is the third item's accordion body.</strong> It is hidden
-        by default, until the collapse plugin adds the appropriate classes that
-        we use to style each element. These classes control the overall
-        appearance, as well as the showing and hiding via CSS transitions. You
-        can modify any of this with custom CSS or overriding our default
-        variables. It's also worth noting that just about any HTML can go within
-        the <code>.accordion-body</code>, though the transition does limit
-        overflow.
-      </div>
+        <textarea name="learningssArea" id="learningsText" class="full-width-textarea" rows="15" cols="80" oninput="learningsRun()"></textarea>
     </div>
   </div>
   <div class="accordion-item">
@@ -403,14 +381,7 @@
       data-bs-parent="#accordionExample"
     >
       <div class="accordion-body">
-        <strong>This is the third item's accordion body.</strong> It is hidden
-        by default, until the collapse plugin adds the appropriate classes that
-        we use to style each element. These classes control the overall
-        appearance, as well as the showing and hiding via CSS transitions. You
-        can modify any of this with custom CSS or overriding our default
-        variables. It's also worth noting that just about any HTML can go within
-        the <code>.accordion-body</code>, though the transition does limit
-        overflow.
+        <textarea name="methodologyArea" id="methodologyText" class="full-width-textarea" rows="15" cols="80" oninput="methodologyRun()"></textarea>
       </div>
     </div>
   </div>
@@ -523,14 +494,7 @@
       data-bs-parent="#accordionExample"
     >
       <div class="accordion-body">
-        <strong>This is the third item's accordion body.</strong> It is hidden
-        by default, until the collapse plugin adds the appropriate classes that
-        we use to style each element. These classes control the overall
-        appearance, as well as the showing and hiding via CSS transitions. You
-        can modify any of this with custom CSS or overriding our default
-        variables. It's also worth noting that just about any HTML can go within
-        the <code>.accordion-body</code>, though the transition does limit
-        overflow.
+        <textarea name="bibliographyArea" id="bibliographyText" class="full-width-textarea" rows="15" cols="80" oninput="bibliographyRun()"></textarea>
       </div>
     </div>
   </div>
@@ -796,7 +760,7 @@
     <div class="tJustificacion">
       <p><span class="num">III.</span> <strong>JUSTIFICACIÓN</strong></p>
     </div>
-    <div class="campoJustificacion" id="justification"></div>
+    <div class="campoJustificacion" id="justification" ></div>
   </section>
 
   <!-- IV COMPETENCIAS -->
@@ -921,6 +885,9 @@
   </section>
 </div>
 
+<script src="{{ url_for('static', filename='js/bundle.js') }}"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/showdown@2.0.0/dist/showdown.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
 <script src="{{ url_for('static', filename='js/drag.js') }}"></script>
 
