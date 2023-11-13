@@ -132,30 +132,32 @@ section #targetDiv {
   background-color: rgb(190, 25, 25);
   /* Color de fondo normal */
 }
+
 .accordion-button:hover {
   background-color: rgb(190, 25, 25);
   /* Color de fondo al pasar el ratón */
   color: #fff;
 }
+
 .accordion-button:focus {
   box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25);
   /* Borde al obtener el enfoque */
 }
+
 .accordion-button:active {
   background-color: rgb(190, 25, 25);
   /* Color de fondo al ser pulsado */
 }
-.cuerpo {
-  float: left;
-  /* Hace que el div se posicione a la izquierda */
+
+.hoja {
+  padding: 25px;
   width: 900px;
-  height: 20%;
-  /* Ajusta la altura según tus necesidades */
-  margin-left: 160px;
-  /* Espaciado entre los divs */
-  margin-bottom: 200px;
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Ancho del lateral derecho */
+  box-sizing: border-box;
+  height: 50%;
+ 
 }
 
 
@@ -163,20 +165,20 @@ section #targetDiv {
 
 
 
-
-
-
-.facultad-programa{
+.facultad-programa {
   text-align: center;
   font-weight: bold;
 }
-.num{
+
+.num {
   margin-left: 10%;
   margin-right: 20px
 }
-.ciclo .componenteCiclo{
-margin-left: 18%;
+
+.ciclo .componenteCiclo {
+  margin-left: 18%;
 }
+
 table {
   border-collapse: collapse;
   width: 100%;
@@ -194,5 +196,6 @@ td {
 .full-width-textarea {
   width: 100%;
   height: 100%;
-  resize: none;  /* Para evitar que el usuario redimensione el textarea */
+  resize: none;
+  /* Para evitar que el usuario redimensione el textarea */
 }
