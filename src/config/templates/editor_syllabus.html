@@ -1,455 +1,630 @@
-{% extends "layout.html" %} 
+{% extends "layout.html" %}
 
 {% block content %}
 
 <header class="navigation">
     <div class="navigation">
         <nav class="navi">
-      
-          <button href="#" class="button_nav">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-badge-left" width="24"
-              height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M11 17h6l-4 -5l4 -5h-6l-4 5z" />
-            </svg>
-          </button>
-      
-          <button href="#" class="button_nav">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-badge-right" width="24"
-              height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M13 7h-6l4 5l-4 5h6l4 -5z" />
-            </svg>
-          </button>
-      
-          <div id="headerButton">
-            <button href="#" class="button_nav" onmouseover="showHeaderMenu()" onmouseout="hideHeaderMenu()">
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-text-size" width="24" height="24"
-                viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M3 7v-2h13v2" />
-                <path d="M10 5v14" />
-                <path d="M12 19h-4" />
-                <path d="M15 13v-1h6v1" />
-                <path d="M18 12v7" />
-                <path d="M17 19h2" />
-              </svg>
+
+            <button href="#" class="button_nav">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-badge-left" width="24"
+                    height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M11 17h6l-4 -5l4 -5h-6l-4 5z" />
+                </svg>
             </button>
-            <div id="headerMenu" onmouseover="showHeaderMenu()" onmouseout="hideHeaderMenu()">
-              <a href="#" onclick="addHeader(1)">h1</a>
-              <a href="#" onclick="addHeader(2)">h2</a>
-              <a href="#" onclick="addHeader(3)">h3</a>
-              <a href="#" onclick="addHeader(4)">h4</a>
-              <a href="#" onclick="addHeader(5)">h5</a>
-              <a href="#" onclick="addHeader(6)">h6</a>
+
+            <button href="#" class="button_nav">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-badge-right"
+                    width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M13 7h-6l4 5l-4 5h6l4 -5z" />
+                </svg>
+            </button>
+
+            <div id="headerButton">
+                <button href="#" class="button_nav" onmouseover="showHeaderMenu()" onmouseout="hideHeaderMenu()">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-text-size" width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M3 7v-2h13v2" />
+                        <path d="M10 5v14" />
+                        <path d="M12 19h-4" />
+                        <path d="M15 13v-1h6v1" />
+                        <path d="M18 12v7" />
+                        <path d="M17 19h2" />
+                    </svg>
+                </button>
+                <div id="headerMenu" onmouseover="showHeaderMenu()" onmouseout="hideHeaderMenu()">
+                    <a href="#" onclick="addHeader(1)">h1</a>
+                    <a href="#" onclick="addHeader(2)">h2</a>
+                    <a href="#" onclick="addHeader(3)">h3</a>
+                    <a href="#" onclick="addHeader(4)">h4</a>
+                    <a href="#" onclick="addHeader(5)">h5</a>
+                    <a href="#" onclick="addHeader(6)">h6</a>
+                </div>
             </div>
-          </div>
-      
-          <button href="#" class="button_nav" onclick="aplicarImg()">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-photo" width="24" height="24"
-              viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M15 8h.01" />
-              <path d="M3 6a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-12z" />
-              <path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l5 5" />
-              <path d="M14 14l1 -1c.928 -.893 2.072 -.893 3 0l3 3" />
-            </svg>
-          </button>
-      
-          <button href="#" class="button_nav" onclick="exportarAPDF()">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" width="24" height="24"
-              viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
-              <path d="M7 11l5 5l5 -5" />
-              <path d="M12 4l0 12" />
-            </svg>
-          </button>
-      
-          <button href="#" class="button_nav" onclick="aplicarNegrita()">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bold" onclick="aplicarNegrita()"
-              width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M7 5h6a3.5 3.5 0 0 1 0 7h-6z" />
-              <path d="M13 12h1a3.5 3.5 0 0 1 0 7h-7v-7" />
-            </svg>
-          </button>
-      
-          <button href="#" class="button_nav" onclick="aplicarCursiva()">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-italic" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-              <path d="M11 5l6 0" />
-              <path d="M7 19l6 0" />
-              <path d="M14 5l-4 14" />
-            </svg>
-          </button>
-      
-          <button href="#" class="button_nav" onclick="aplicarEnlace()">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24"
-              viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M9 15l6 -6" />
-              <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
-              <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
-            </svg>
-          </button>
-      
-          <button href="#" class="button_nav" onclick="aplicarListas()">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-list" width="24" height="24"
-              viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M9 6l11 0" />
-              <path d="M9 12l11 0" />
-              <path d="M9 18l11 0" />
-              <path d="M5 6l0 .01" />
-              <path d="M5 12l0 .01" />
-              <path d="M5 18l0 .01" />
-            </svg>
-          </button>
-      
-          <button href="#" class="button_nav">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-table" width="24" height="24"
-              viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-14z" />
-              <path d="M3 10h18" />
-              <path d="M10 3v18" />
-            </svg>
-          </button>
+
+            <button href="#" class="button_nav" onclick="aplicarImg()">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-photo" width="24"
+                    height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M15 8h.01" />
+                    <path d="M3 6a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-12z" />
+                    <path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l5 5" />
+                    <path d="M14 14l1 -1c.928 -.893 2.072 -.893 3 0l3 3" />
+                </svg>
+            </button>
+
+            <button href="#" class="button_nav" onclick="exportarAPDF()">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" width="24"
+                    height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                    <path d="M7 11l5 5l5 -5" />
+                    <path d="M12 4l0 12" />
+                </svg>
+            </button>
+
+            <button href="#" class="button_nav" onclick="aplicarNegrita()">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bold"
+                    onclick="aplicarNegrita()" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M7 5h6a3.5 3.5 0 0 1 0 7h-6z" />
+                    <path d="M13 12h1a3.5 3.5 0 0 1 0 7h-7v-7" />
+                </svg>
+            </button>
+
+            <button href="#" class="button_nav" onclick="aplicarCursiva()">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-italic" width="28"
+                    height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M11 5l6 0" />
+                    <path d="M7 19l6 0" />
+                    <path d="M14 5l-4 14" />
+                </svg>
+            </button>
+
+            <button href="#" class="button_nav" onclick="aplicarEnlace()">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24"
+                    viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M9 15l6 -6" />
+                    <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
+                    <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
+                </svg>
+            </button>
+
+            <button href="#" class="button_nav" onclick="aplicarListas()">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-list" width="24" height="24"
+                    viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M9 6l11 0" />
+                    <path d="M9 12l11 0" />
+                    <path d="M9 18l11 0" />
+                    <path d="M5 6l0 .01" />
+                    <path d="M5 12l0 .01" />
+                    <path d="M5 18l0 .01" />
+                </svg>
+            </button>
+
+            <button href="#" class="button_nav">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-table" width="24"
+                    height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-14z" />
+                    <path d="M3 10h18" />
+                    <path d="M10 3v18" />
+                </svg>
+            </button>
         </nav>
-      </div>
+    </div>
 </header>
 
-    <!-- Cuadro de inicio -->
-    <div class="cuerpo" id="DivExportar">
-        <section class="inicio">
-            <div class="imageLibre">
-                
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                MICROCURRICULO
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse
+                plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
+                custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go
+                within the <code>.accordion-body</code>, though the transition does limit overflow.
             </div>
-            <div class="titulo">
-                <p>FORMATO MICROCURRICULO</p>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                IDENTIFICACIÓN
+            </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
+                plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
+                custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go
+                within the <code>.accordion-body</code>, though the transition does limit overflow.
             </div>
-            <div class="documento">
-                <p>ST-DOC-01-E-01-F01</p>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                JUSTIFICACIÓN
+            </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
+                plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
+                custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go
+                within the <code>.accordion-body</code>, though the transition does limit overflow.
             </div>
-            <div class="version">
-                <p>Versión 2</p>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                COMPETENCIAS
+            </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
+                plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
+                custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go
+                within the <code>.accordion-body</code>, though the transition does limit overflow.
             </div>
-            <div class="fecha" id="date">
-                
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                RESULTADOS DE APRENDIZAJE DEL PROGRAMA
+            </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
+                plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
+                custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go
+                within the <code>.accordion-body</code>, though the transition does limit overflow.
             </div>
-        </section>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                METODOLOGÍA GENERAL
+            </button>
+        </h2>
+        <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
+                plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
+                custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go
+                within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                CONTENIDO PROGRÁMATICO
+            </button>
+        </h2>
+        <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
+                plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
+                custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go
+                within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                ESTRATEGIAS DE ENSEÑANZA-APRENDIZAJE
+            </button>
+        </h2>
+        <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
+                plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
+                custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go
+                within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                EVALUACIÓN
+            </button>
+        </h2>
+        <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
+                plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
+                custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go
+                within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                BIBLIOGRAFÍA
+            </button>
+        </h2>
+        <div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
+                plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
+                custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go
+                within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+        </div>
+    </div>
+</div>
 
-        <!-- Facultad del syllabus y el programa -->
-        <section class="facultad-programa">
-            <div class="facultad">
-                <p>FACULTAD DE <span id="Facultad"></span></p>
-            </div>
-            <div class="programa">
-                <p>PROGRAMA DE <span id="Programa"></span></p>
-            </div>
-        </section>
+<!-- Cuadro de inicio -->
+<div class="cuerpo" id="DivExportar">
+    <section class="inicio">
+        <div class="imageLibre">
 
-        <!-- Ciclo -->
-        <section class="ciclo">
-            <div class="tipoCiclo">
-                <p>CICLO:    <span id="ciclo"></span></p>
-            </div>
-            <div class="componenteCiclo">
-                <p>COMPONENTE: PROFESIONAL</p>
-            </div>
-        </section>
+        </div>
+        <div class="titulo">
+            <p>FORMATO MICROCURRICULO</p>
+        </div>
+        <div class="documento">
+            <p>ST-DOC-01-E-01-F01</p>
+        </div>
+        <div class="version">
+            <p>Versión 2</p>
+        </div>
+        <div class="fecha" id="date">
 
-        <!-- Identificación -->
-        <section class="identificacion" id="identification">
-            <div class="tIdentificacion">
-                <p>II.     IDENTIFICACIÓN</p>
-            </div>
-            <div class="cuadroIdentificacion">
-                <!-- fila nombre asignatura -->
-                <div class="filaNombreAsignatura">
-                    <div class="tNombreAsignatura">
-                        <p>NOMBRE ASIGNATURA O MODULO</p>
-                    </div>
-                    <div class="NombreAsignatura" id="nameAsignatura">
-                        
-                    </div>
+        </div>
+    </section>
+
+    <!-- Facultad del syllabus y el programa -->
+    <section class="facultad-programa">
+        <div class="facultad">
+            <p>FACULTAD DE <span id="Facultad"></span></p>
+        </div>
+        <div class="programa">
+            <p>PROGRAMA DE <span id="Programa"></span></p>
+        </div>
+    </section>
+
+    <!-- Ciclo -->
+    <section class="ciclo">
+        <div class="tipoCiclo">
+            <p>CICLO: <span id="ciclo"></span></p>
+        </div>
+        <div class="componenteCiclo">
+            <p>COMPONENTE: PROFESIONAL</p>
+        </div>
+    </section>
+
+    <!-- Identificación -->
+    <section class="identificacion" id="identification">
+        <div class="tIdentificacion">
+            <p>II. IDENTIFICACIÓN</p>
+        </div>
+        <div class="cuadroIdentificacion">
+            <!-- fila nombre asignatura -->
+            <div class="filaNombreAsignatura">
+                <div class="tNombreAsignatura">
+                    <p>NOMBRE ASIGNATURA O MODULO</p>
                 </div>
-                <!-- fila codigo asignatura -->
-                <div class="filaCodigoAsignatura">
-                    <div class="tCodigo">
-                        <p>CÓDIGO</p>
-                    </div>
-                    <div class="CodigoAsignatura" id="codeAsignatura">
-                        
-                    </div>
-                </div>
-                <!-- fila semestre de la asignatura -->
-                <div class="filaSemestreAsignatura">
-                    <div class="tSemestre">
-                        <p>SEMESTRE</p>
-                    </div>
-                    <div class="SemestreAsignatura" id="semesterAsignatura">
-                        
-                    </div>
-                </div>
-                <!-- fila creditos academicos -->
-                <div class="filaCreditosAcademicos">
-                    <div class="tCreditos">
-                        <p>Nº DE CRÉDITOS ACADÉMICOS</p>
-                    </div>
-                    <div class="creditosAcademicos" id="creditsAcademicos">
-                        
-                    </div>
-                </div>
-                <!-- fila modalidad asignatura -->
-                <div class="filaModalidadAsignatura">
-                    <div class="tModalidad">
-                        <p>MODALIDAD*</p>
-                    </div>
-                    <!-- campo de las modalidades -->
-                    <div class="tipoModalidades">
-                        <div class="filaModalidadPresencial">
+                <div class="NombreAsignatura" id="nameAsignatura">
 
-                            <div class="modalidadPresencial">
-                                <P>Presencial</P>
-                            </div>
+                </div>
+            </div>
+            <!-- fila codigo asignatura -->
+            <div class="filaCodigoAsignatura">
+                <div class="tCodigo">
+                    <p>CÓDIGO</p>
+                </div>
+                <div class="CodigoAsignatura" id="codeAsignatura">
 
-                            <div class="campoModalidadPresencial" id="idModalidadPresencial">
-                                
-                            </div>
+                </div>
+            </div>
+            <!-- fila semestre de la asignatura -->
+            <div class="filaSemestreAsignatura">
+                <div class="tSemestre">
+                    <p>SEMESTRE</p>
+                </div>
+                <div class="SemestreAsignatura" id="semesterAsignatura">
+
+                </div>
+            </div>
+            <!-- fila creditos academicos -->
+            <div class="filaCreditosAcademicos">
+                <div class="tCreditos">
+                    <p>Nº DE CRÉDITOS ACADÉMICOS</p>
+                </div>
+                <div class="creditosAcademicos" id="creditsAcademicos">
+
+                </div>
+            </div>
+            <!-- fila modalidad asignatura -->
+            <div class="filaModalidadAsignatura">
+                <div class="tModalidad">
+                    <p>MODALIDAD*</p>
+                </div>
+                <!-- campo de las modalidades -->
+                <div class="tipoModalidades">
+                    <div class="filaModalidadPresencial">
+
+                        <div class="modalidadPresencial">
+                            <P>Presencial</P>
                         </div>
 
-                        <div class="filaModalidadTIC">
-                            <div class="modalidadTIC">
-                                <p>Presencial asistida por TIC</p>
-                            </div>
+                        <div class="campoModalidadPresencial" id="idModalidadPresencial">
 
-                            <div class="campoTIC" id="idModalidadTIC">
-                                
-                            </div>
-                        </div>
-
-                        <div class="filaModalidadVirtual">
-                            <div class="modalidadVirtual">
-                                <p>Virtual</p>
-                            </div>
-                            <div class="campoVirtual" id="idModalidadVirtual">
-                                
-                            </div>
                         </div>
                     </div>
-                </div>
 
-               <!--  fila tipo de asignatura -->
+                    <div class="filaModalidadTIC">
+                        <div class="modalidadTIC">
+                            <p>Presencial asistida por TIC</p>
+                        </div>
 
-                <div class="filaTipoAsignatura">
-                    <div class="tTipoAsignatura">
-                        <p>TIPO DE ASIGNATURA*</p>
+                        <div class="campoTIC" id="idModalidadTIC">
+
+                        </div>
                     </div>
-                    <!-- campo de los tipos de asigntura -->
-                    <div class="tipoAsignaturas">
-                        <div class="filaAsignaturaTeorica">
-                            <div class="tTeorica">
-                                <p>Teórica</p>
-                            </div>
-                            <div class="campoTeorica" id="idAsignaturaTeorica">
-                                
-                            </div>
+
+                    <div class="filaModalidadVirtual">
+                        <div class="modalidadVirtual">
+                            <p>Virtual</p>
                         </div>
-                        <div class="filaAsignaturaTeoricoPractica">
-                            <div class="tTeoricoPractica">
-                                <p>Teórico-Práctica</p>
-                            </div>
-                            <div class="campoTeoricoPractica" id="idAsignaturaTeoricoPractica">
-                                
-                            </div>
-                        </div>
-                        <div class="filaAsignaturaPractica">
-                            <div class="tPractica">
-                                <p>Práctica</p>
-                            </div>
-                            <div class="campoPractica" id="idAsignaturaPractica">
-                                
-                            </div>
+                        <div class="campoVirtual" id="idModalidadVirtual">
+
                         </div>
                     </div>
                 </div>
-                <!-- fila docentes -->
-                <div class="filaDocentes">
-                    <div class="tDocentes">
-                        <p>DOCENTE(S)</p>
-                    </div>
-                    <div class="campoDocentes" id="idDocentes">
+            </div>
 
+            <!--  fila tipo de asignatura -->
+
+            <div class="filaTipoAsignatura">
+                <div class="tTipoAsignatura">
+                    <p>TIPO DE ASIGNATURA*</p>
+                </div>
+                <!-- campo de los tipos de asigntura -->
+                <div class="tipoAsignaturas">
+                    <div class="filaAsignaturaTeorica">
+                        <div class="tTeorica">
+                            <p>Teórica</p>
+                        </div>
+                        <div class="campoTeorica" id="idAsignaturaTeorica">
+
+                        </div>
+                    </div>
+                    <div class="filaAsignaturaTeoricoPractica">
+                        <div class="tTeoricoPractica">
+                            <p>Teórico-Práctica</p>
+                        </div>
+                        <div class="campoTeoricoPractica" id="idAsignaturaTeoricoPractica">
+
+                        </div>
+                    </div>
+                    <div class="filaAsignaturaPractica">
+                        <div class="tPractica">
+                            <p>Práctica</p>
+                        </div>
+                        <div class="campoPractica" id="idAsignaturaPractica">
+
+                        </div>
                     </div>
                 </div>
-                <!-- fila fecha actualización -->
-                <div class="filaFechaActualizacion">
-                    <div class="tFechaActualizacion">
-                        <p>FECHA DE ACTUALIZACIÓN</p>
-                    </div>
-                    <div class="campoFechaActualizacion" id="dateActualizacion">
-
-                    </div>
+            </div>
+            <!-- fila docentes -->
+            <div class="filaDocentes">
+                <div class="tDocentes">
+                    <p>DOCENTE(S)</p>
                 </div>
-            </div>
-        </section>
-
-        <!-- III Justificación -->
-        <section class="justificacion">
-            <div class="tJustificacion">
-                III. JUSTIFICACIÓN
-            </div>
-            <div class="campoJustificacion" id="justification">
-
-            </div>
-        </section>
-
-        <!-- IV COMPETENCIAS -->
-        <section class="competencias">
-            <div class="tJustificacion">
-                <p>IV. COMPETENCIAS</p>
-                <div class="campoCompetencias" id="competences">
+                <div class="campoDocentes" id="idDocentes">
 
                 </div>
             </div>
-        </section>
-        <!-- V resultados de aprendizaje del programa -->
-        <section class="aprendizaje">
-            <div class="tAprendizaje">
-                <p>V. RESULTADOS DE APRENDIZAJE DEL PROGRAMA</p>
+            <!-- fila fecha actualización -->
+            <div class="filaFechaActualizacion">
+                <div class="tFechaActualizacion">
+                    <p>FECHA DE ACTUALIZACIÓN</p>
+                </div>
+                <div class="campoFechaActualizacion" id="dateActualizacion">
+
+                </div>
             </div>
-            <div class="campoAprendizaje" id="learning_results">
+        </div>
+    </section>
+
+    <!-- III Justificación -->
+    <section class="justificacion">
+        <div class="tJustificacion">
+            III. JUSTIFICACIÓN
+        </div>
+        <div class="campoJustificacion" id="justification">
+
+        </div>
+    </section>
+
+    <!-- IV COMPETENCIAS -->
+    <section class="competencias">
+        <div class="tJustificacion">
+            <p>IV. COMPETENCIAS</p>
+            <div class="campoCompetencias" id="competences">
 
             </div>
-        </section>
+        </div>
+    </section>
+    <!-- V resultados de aprendizaje del programa -->
+    <section class="aprendizaje">
+        <div class="tAprendizaje">
+            <p>V. RESULTADOS DE APRENDIZAJE DEL PROGRAMA</p>
+        </div>
+        <div class="campoAprendizaje" id="learning_results">
 
-       <!--  VI metodología general -->
-       <section class="metodología">
+        </div>
+    </section>
+
+    <!--  VI metodología general -->
+    <section class="metodología">
         <div class="tMetodologia">
             <p>VI. METODOLOGÍA GENERAL</p>
         </div>
         <div class="campoMetodologias" id="methodology">
 
         </div>
-       </section>
+    </section>
 
-       <!-- VII. CONTENIDOS PROGRAMÁTICOS VIII. ESTRATEGIAS DE ENSEÑANZA DE APRENDIZAJE -->
-       <section class="contenido-estrategias"> 
-            <div class="contenidoProgramatico">
-                <div class="tContenidoProgramatico">
-                    <p>VII. CONTENIDO PROGRAMATICO</p>
+    <!-- VII. CONTENIDOS PROGRAMÁTICOS VIII. ESTRATEGIAS DE ENSEÑANZA DE APRENDIZAJE -->
+    <section class="contenido-estrategias">
+        <div class="contenidoProgramatico">
+            <div class="tContenidoProgramatico">
+                <p>VII. CONTENIDO PROGRAMATICO</p>
+            </div>
+            <div class="campoContenidoProgramatico" id="program_content">
+                <div class="bloques">
+
                 </div>
-                <div class="campoContenidoProgramatico" id="program_content">
+            </div>
+        </div>
+        <!-- ESTRATEGIAS DE ENSEÑANZA DE APRENDIZAJE -->
+        <div class="estrategias">
+            <div class="estrategiasDeAprendizaje">
+                <div class="tEstrategias">
+                    <p>VIII. ESTRATEGIAS DE ENSEÑANZA-APRENDIZAJE</p>
+                </div>
+                <div class="campoEstrategias" id="strategies">
                     <div class="bloques">
 
                     </div>
                 </div>
             </div>
-            <!-- ESTRATEGIAS DE ENSEÑANZA DE APRENDIZAJE -->
-            <div class="estrategias">
-                <div class="estrategiasDeAprendizaje">
-                    <div class="tEstrategias">
-                        <p>VIII. ESTRATEGIAS DE ENSEÑANZA-APRENDIZAJE</p>
-                    </div>
-                    <div class="campoEstrategias" id="strategies">
-                        <div class="bloques">
+        </div>
+    </section>
 
-                        </div>
+    <!-- EVALUACION -->
+    <section class="evaluacion">
+        <div class="tEvaluacion">
+            <p>IX. EVALUACIÓN</p>
+        </div>
+
+        <div class="tTablaPorcentaje-Estrategias">
+            <div class="tPorcentaje">
+                <p>PORCENTAJE</p>
+            </div>
+            <div class="tEstrategias">
+                <p>ESTRATEGIAS</p>
+            </div>
+        </div>
+
+        <div class="porcentaje-estrategias">
+            <div class="primerCorte">
+                <div class="tPrimerCorte">
+                    <p>1er. (_30_%)</p>
+                </div>
+                <div class="estrategiasPrimerCorte">
+                    <div class="bloques" id="firstEvaluation">
+
                     </div>
                 </div>
             </div>
-       </section>
-
-       <!-- EVALUACION -->
-       <section class="evaluacion">
-            <div class="tEvaluacion">
-                <p>IX. EVALUACIÓN</p>
-            </div>
-            
-            <div class="tTablaPorcentaje-Estrategias">
-                <div class="tPorcentaje">
-                    <p>PORCENTAJE</p>
+            <div class="segundoCorte">
+                <div class="tSegundoCorte">
+                    <p>2do. (_30_%)</p>
                 </div>
-                <div class="tEstrategias">
-                    <p>ESTRATEGIAS</p>
-                </div>
-            </div>
+                <div class="estrategiasSegundoCorte">
+                    <div class="bloques" id="secondEvaluation">
 
-            <div class="porcentaje-estrategias">
-                <div class="primerCorte">
-                    <div class="tPrimerCorte">
-                        <p>1er. (_30_%)</p>
-                    </div>
-                    <div class="estrategiasPrimerCorte">
-                        <div class="bloques" id="firstEvaluation">
-
-                        </div>
-                    </div>
-                </div>
-                <div class="segundoCorte">
-                    <div class="tSegundoCorte">
-                        <p>2do. (_30_%)</p>
-                    </div>
-                    <div class="estrategiasSegundoCorte">
-                        <div class="bloques" id="secondEvaluation">
-
-                        </div>
-                    </div>
-                </div>
-                <div class="tercerCorte">
-                    <div class="tTercerCorte">
-                        <p>3ro. (_40_%)</p>
-                    </div>
-                    <div class="estrategiasTercerCorte">
-                        <div class="bloques" id="thirdEvaluation">
-
-                        </div>
                     </div>
                 </div>
             </div>
+            <div class="tercerCorte">
+                <div class="tTercerCorte">
+                    <p>3ro. (_40_%)</p>
+                </div>
+                <div class="estrategiasTercerCorte">
+                    <div class="bloques" id="thirdEvaluation">
 
-       </section>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-       <!-- BIBLIOGRAFÍA -->
-       <section class="bibliografia">
-            <div class="tBibliografia">
-                <p>X. BIBLIOGRAFÍA</p>
-            </div>
-            <div class="campoBibliografia" id="bibliography">
+    </section>
 
-            </div>
-       </section>
+    <!-- BIBLIOGRAFÍA -->
+    <section class="bibliografia">
+        <div class="tBibliografia">
+            <p>X. BIBLIOGRAFÍA</p>
+        </div>
+        <div class="campoBibliografia" id="bibliography">
 
-       <section class="firmas">
-            <div class="docente">
-                <p>___________________</p>
-                <p>     DOCENTE       </p>
-            </div>
-            <div class="directorPrograma">
-                <p>___________________</p>
-                <p>DIRECTOR PROGRAMA</p>
-                <p>(Si Aplica)</p>
-            </div>
-            <div class="decano">
-                <p>___________________</p>
-                <p>DECANO</p>
-            </div>
-       </section>
+        </div>
+    </section>
 
-    </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
-    <script src="{{ url_for('static', filename='js/drag.js') }}"></script>
+    <section class="firmas">
+        <div class="docente">
+            <p>___________________</p>
+            <p> DOCENTE </p>
+        </div>
+        <div class="directorPrograma">
+            <p>___________________</p>
+            <p>DIRECTOR PROGRAMA</p>
+            <p>(Si Aplica)</p>
+        </div>
+        <div class="decano">
+            <p>___________________</p>
+            <p>DECANO</p>
+        </div>
+    </section>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script src="{{ url_for('static', filename='js/drag.js') }}"></script>
 
 {% endblock %}
