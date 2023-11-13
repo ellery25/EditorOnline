@@ -42,8 +42,6 @@
 
 
 
-
-
 section {
   height: 100%;
 }
@@ -57,8 +55,6 @@ section #targetDiv {
   height: 100%;
 
 }
-
-
 
 
 .elemento {
@@ -119,8 +115,6 @@ section #targetDiv {
   border: 1px rgb(190, 25, 25);
 }
 
-
-
 .accordion-container {
   display: flex;
   justify-content: flex-start;
@@ -138,23 +132,19 @@ section #targetDiv {
   background-color: rgb(190, 25, 25);
   /* Color de fondo normal */
 }
-
 .accordion-button:hover {
   background-color: rgb(190, 25, 25);
   /* Color de fondo al pasar el ratón */
   color: #fff;
 }
-
 .accordion-button:focus {
   box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25);
   /* Borde al obtener el enfoque */
 }
-
 .accordion-button:active {
   background-color: rgb(190, 25, 25);
   /* Color de fondo al ser pulsado */
 }
-
 .cuerpo {
   float: left;
   /* Hace que el div se posicione a la izquierda */
@@ -166,5 +156,33 @@ section #targetDiv {
   margin-bottom: 200px;
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
+
+
+
+
+
+
+
+
+.facultad-programa{
+  text-align: center;
+  font-weight: bold;
+}
+.num{
+  margin-left: 10%;
+  margin-right: 20px
+}
+.ciclo .componenteCiclo{
+margin-left: 18%;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  border: 1px solid black;
+  padding: 8px;
 }
