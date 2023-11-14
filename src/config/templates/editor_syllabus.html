@@ -3,24 +3,7 @@
 <header class="navigation">
   <div class="navigation">
     <nav class="navi">
-      <button href="#" class="button_nav">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-badge-left" width="24"
-          height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round"
-          stroke-linejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <path d="M11 17h6l-4 -5l4 -5h-6l-4 5z" />
-        </svg>
-      </button>
-
-      <button href="#" class="button_nav">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-badge-right" width="24"
-          height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round"
-          stroke-linejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <path d="M13 7h-6l4 5l-4 5h6l4 -5z" />
-        </svg>
-      </button>
-
+      
       <div id="headerButton">
         <button href="#" class="button_nav" onmouseover="showHeaderMenu()" onmouseout="hideHeaderMenu()">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-text-size" width="24" height="24"
@@ -77,6 +60,9 @@
           <path d="M13 12h1a3.5 3.5 0 0 1 0 7h-7v-7" />
         </svg>
       </button>
+
+
+      <img width="4%" src="{{ url_for('static', filename='img/logo.png') }}" alt="icono">
 
       <button href="#" class="button_nav" onclick="aplicarCursiva()">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-italic" width="28" height="28"
@@ -141,58 +127,58 @@
       <div class="accordion-body">
         <p>
           <strong>Encabezados:</strong>
+        <ul>
+          <li># Encabezado 1</li>
+          <li>## Encabezado 2</li>
+          <li>### Encabezado 3</li>
+          <li>#### Encabezado 4</li>
+          <li>##### Encabezado 5</li>
+          <li>###### Encabezado 6</li>
+        </ul>
+        <br>
+        <strong>Texto en negrita y cursiva:</strong>
+        <ul>
+          <li>**Texto en negrita**</li>
+          <li>*Texto en cursiva*</li>
+        </ul>
+        <br>
+        <strong>Listas:</strong>
+        <br>
+        <ul>
+          <li>"- Elemento de lista 1"</li>
+          <li>"- Elemento de lista 2"</li>
           <ul>
-            <li># Encabezado 1</li>
-            <li>## Encabezado 2</li>
-            <li>### Encabezado 3</li>
-            <li>#### Encabezado 4</li>
-            <li>##### Encabezado 5</li>
-            <li>###### Encabezado 6</li>
+            <li>"- Subelemento de lista"</li>
           </ul>
-          <br>
-          <strong>Texto en negrita y cursiva:</strong>
-          <ul>
-            <li>**Texto en negrita**</li>
-            <li>*Texto en cursiva*</li>
-          </ul>
-          <br>
-          <strong>Listas:</strong>
-          <br>
-          <ul>
-            <li>"- Elemento de lista 1"</li>
-            <li>"- Elemento de lista 2"</li>
-            <ul>
-              <li>"- Subelemento de lista"</li>
-            </ul>
-          </ul>
-          <ol>
-            <li>"1. Lista numerada 1"</li>
-            <li>"2. Lista numerada 2"</li>
-          </ol>
-          <br>
-          <strong>Enlaces:</strong>
-          <br>
-          [Texto del enlace](https://www.ejemplo.com)
-          <br>
-          <br>
-          <strong>Imágenes:</strong>
-          <br>
-          ![Texto alternativo](ruta/imagen.jpg)
-          <br>
-          <br>
-          <strong>Citas:</strong>
-          <br>
-          > Esto es una cita.
-          <br>
-          <br>
-          <strong>Líneas horizontales:</strong>
-          <br>
-          ---
-          <br>
-          <br>
-          <strong>Código en línea:</strong>
-          <br>
-          `código en línea`
+        </ul>
+        <ol>
+          <li>"1. Lista numerada 1"</li>
+          <li>"2. Lista numerada 2"</li>
+        </ol>
+        <br>
+        <strong>Enlaces:</strong>
+        <br>
+        [Texto del enlace](https://www.ejemplo.com)
+        <br>
+        <br>
+        <strong>Imágenes:</strong>
+        <br>
+        ![Texto alternativo](ruta/imagen.jpg)
+        <br>
+        <br>
+        <strong>Citas:</strong>
+        <br>
+        > Esto es una cita.
+        <br>
+        <br>
+        <strong>Líneas horizontales:</strong>
+        <br>
+        ---
+        <br>
+        <br>
+        <strong>Código en línea:</strong>
+        <br>
+        `código en línea`
 
 
         </p>
@@ -208,14 +194,165 @@
     </h2>
     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>This is the second item's accordion body.</strong> It is hidden
-        by default, until the collapse plugin adds the appropriate classes that
-        we use to style each element. These classes control the overall
-        appearance, as well as the showing and hiding via CSS transitions. You
-        can modify any of this with custom CSS or overriding our default
-        variables. It's also worth noting that just about any HTML can go within
-        the <code>.accordion-body</code>, though the transition does limit
-        overflow.
+
+        <div class="accordion2" id="accordionPanelsStayOpenExample">
+          <div class="accordion-item2">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseOne2" aria-expanded="true"
+                aria-controls="panelsStayOpen-collapseOne2">
+                NOMBRE ASIGNATURA
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne2" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <textarea name="" id="" cols="80" rows="15" class="full-width-textarea"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item2">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseTwo2" aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseTwo2">
+                CÓDIGO
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseTwo2" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <textarea name="" id="" cols="80" rows="15" class="full-width-textarea"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item2">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseThree2" aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseThree2">
+                SEMESTRE
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseThree2" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <textarea name="" id="" cols="80" rows="15" class="full-width-textarea"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item2">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseFour2" aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseFour2">
+                CRÉDITOS
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseFour2" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <textarea name="" id="" cols="80" rows="15" class="full-width-textarea"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item2">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseFive2" aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseFive2">
+                MODALIDAD
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseFive2" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                
+                <form>
+                  <label>
+                    <input type="radio" name="opcion" value="opcion1"> Presencial
+                  </label>
+                  <br>
+                  <label>
+                    <input type="radio" name="opcion" value="opcion2"> Presencial asistida por las TIC
+                  </label>
+                  <br>
+                  <label>
+                    <input type="radio" name="opcion" value="opcion3"> Virtual
+                  </label>
+                  <br>
+                  <br>
+              
+                  <!-- Agrega más opciones según sea necesario -->
+              
+                  <input style="width: 100%;" class="btn btn-primary" type="submit" value="Enviar">
+                </form>
+
+
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item2">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseSix2" aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseSix2">
+                TIPO DE ASIGNATURA
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseSix2" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                
+                <form>
+                  <label>
+                    <input type="radio" name="opcion" value="opcion1"> Teórica
+                  </label>
+                  <br>
+                  <label>
+                    <input type="radio" name="opcion" value="opcion2"> Teórico-práctica
+                  </label>
+                  <br>
+                  <label>
+                    <input type="radio" name="opcion" value="opcion3"> Práctica
+                  </label>
+                  <br>
+                  <br>
+              
+                  <!-- Agrega más opciones según sea necesario -->
+              
+                  <input style="width: 100%;" class="btn btn-primary" type="submit" value="Enviar">
+                </form>
+
+
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item2">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseSeven2" aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseSeven2">
+                DOCENTE(S)
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseSeven2" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <textarea name="" id="" cols="80" rows="15" class="full-width-textarea"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item2">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseEight2" aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseEight2">
+                FECHA DE ACTUALIZACIÓN
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseEight2" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <textarea name="" id="" cols="80" rows="15" class="full-width-textarea"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
       </div>
     </div>
   </div>
@@ -284,7 +421,7 @@
     </h2>
     <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
       <div class="accordion-body" id="blockItems">
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+        <button type="button" class="btn btn-primary" style="width: 100%;" data-bs-toggle="modal" data-bs-target="#exampleModal"
           data-bs-whatever="@getbootstrap">Crear nuevo bloque</button>
 
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -341,13 +478,9 @@
                 PRIMER CORTE
               </button>
             </h2>
-            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
               <div class="accordion-body">
-                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse
-                plugin adds the appropriate classes that we use to style each element. These classes control the overall
-                appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
-                custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go
-                within the <code>.accordion-body</code>, though the transition does limit overflow.
+                <textarea name="" id="" cols="80" rows="15" class="full-width-textarea"></textarea>
               </div>
             </div>
           </div>
@@ -361,11 +494,7 @@
             </h2>
             <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
               <div class="accordion-body">
-                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
-                plugin adds the appropriate classes that we use to style each element. These classes control the overall
-                appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
-                custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go
-                within the <code>.accordion-body</code>, though the transition does limit overflow.
+                <textarea name="" id="" cols="80" rows="15" class="full-width-textarea"></textarea>
               </div>
             </div>
           </div>
@@ -379,11 +508,7 @@
             </h2>
             <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
               <div class="accordion-body">
-                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
-                plugin adds the appropriate classes that we use to style each element. These classes control the overall
-                appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
-                custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go
-                within the <code>.accordion-body</code>, though the transition does limit overflow.
+                <textarea name="" id="" cols="80" rows="15" class="full-width-textarea"></textarea>
               </div>
             </div>
           </div>
