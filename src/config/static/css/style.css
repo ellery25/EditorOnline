@@ -149,7 +149,7 @@ section #targetDiv {
   /* Color de fondo al ser pulsado */
 }
 
-.hoja {
+.cuerpo {
   padding: 25px;
   width: 900px;
   background-color: white;
@@ -157,8 +157,11 @@ section #targetDiv {
   /* Ancho del lateral derecho */
   box-sizing: border-box;
   height: 50%;
- 
+  margin-bottom: 200px;
+  margin-left: 800px;
+  top: 8%;
 }
+
 
 
 
@@ -181,13 +184,21 @@ section #targetDiv {
 
 table {
   border-collapse: collapse;
-  width: 100%;
+   width: 100%;
+   border: 2px solid #050505;
+}
+table td {
+  border: 2px solid #000000;
+  padding: 8px;
+  text-align: left;
+}
+table table td {
+  border: 2px solid #000000;
+  padding: 8px;
+  text-align: left;
 }
 
-td {
-  border: 1px solid black;
-  padding: 8px;
-}
+
 
 #JustificationText {
   display: block;
