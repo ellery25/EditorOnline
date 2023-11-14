@@ -16,7 +16,7 @@ function exportarAPDF() {
 
 
 function aplicarNegrita() {
-    var editor = document.getElementById('sourceTA');
+    var editor = document.getElementById('JustificationText');
     var seleccion = window.getSelection().toString();
 
     // Verifica si hay texto seleccionado
@@ -31,7 +31,7 @@ function aplicarNegrita() {
 
 
 function aplicarCursiva() {
-    var editor = document.getElementById('sourceTA');
+    var editor = document.getElementById('JustificationText');
     var seleccion = window.getSelection().toString();
 
     // Verifica si hay texto seleccionado
@@ -45,7 +45,7 @@ function aplicarCursiva() {
 }
 
 function aplicarEnlace() {
-    var editor = document.getElementById('sourceTA');
+    var editor = document.getElementById('JustificationText');
     var seleccion = window.getSelection().toString();
 
     // Verifica si hay texto seleccionado
@@ -61,7 +61,7 @@ function aplicarEnlace() {
 
 
 function aplicarImg() {
-    var editor = document.getElementById('sourceTA');
+    var editor = document.getElementById('JustificationText');
     var seleccion = window.getSelection().toString();
 
     // Verifica si hay texto seleccionado
@@ -75,21 +75,21 @@ function aplicarImg() {
 }
 
 function aplicarListas() {
-    var editor = document.getElementById('sourceTA');
+    var editor = document.getElementById('JustificationText');
     var seleccion = window.getSelection().toString();
-    var contenidoActual = document.getElementById('sourceTA').innerHTML;
+    var contenidoActual = document.getElementById('JustificationText').innerHTML;
     // Verifica si hay texto seleccionado
     if (seleccion !== '') {
         var nuevoContenido = editor.innerHTML.replace(seleccion, `>-${seleccion}`);
         editor.innerHTML = nuevoContenido;
     } else if (seleccion !== '>-' + seleccion) {
-        var contenidoActual = document.getElementById('sourceTA').innerHTML;
+        var contenidoActual = document.getElementById('JustificationText').innerHTML;
 
         // Agregar un encabezado con #
         var nuevoContenido = '>' + contenidoActual;
 
         // Actualizar el contenido del div
-        document.getElementById('sourceTA').innerHTML = nuevoContenido;
+        document.getElementById('JustificationText').innerHTML = nuevoContenido;
     }
 }
 
@@ -105,7 +105,7 @@ function hideHeaderMenu() {
 }
 
 function addHeader(level) {
-    var editor = document.getElementById('sourceTA');
+    var editor = document.getElementById('JustificationText');
     var headerText = "Encabezado " + level;
 
     // Obtener la selección actual del editor
